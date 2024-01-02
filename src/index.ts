@@ -28,6 +28,12 @@ class oreg extends RegExp {
         this.oreg += '(' + suffixes.join('|') + ')$';
         return this;
     }
+
+    anyOf(callback: Function) {
+        // TODO: placeholder fix this
+        this.oreg += '(' + callback(this) + ')';
+        return this;
+    }
     
     chars(chars: string) {
         this.oreg += '[' + chars + ']';
