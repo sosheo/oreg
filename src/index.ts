@@ -10,6 +10,12 @@ class oreg extends RegExp {
         return this;
     }
 
+    startsWith(prefix: string) {
+        this.oreg = '^' + prefix;
+        return this;
+    }
+
+    
 
 }
 
