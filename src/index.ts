@@ -36,6 +36,11 @@ class oreg extends RegExp {
         return this;
     }
 
+    caseInsensitive() {
+        this.oreg += '/i';
+        return this;
+    }
+
 
 }
 
