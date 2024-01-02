@@ -40,6 +40,32 @@ class oreg extends RegExp {
         this.oreg += '/i';
         return this;
     }
+    getRegex() {
+        return this.reg;
+    }
+
+    getRegexObject() {
+        // recall constructor on this??
+        return new RegExp(this.reg);
+    }
+
+    getRegexString() {
+        return this.reg.toString();
+    }
+
+    getRegexStringWithoutSlashes() {
+        return this.reg.toString().slice(1, -1);
+    }
+
+    getRegexStringWithoutSlashesAndModifiers() {
+        return this.reg.toString().slice(1, -3);
+    }
+
+    getRegexStringWithoutModifiers() {
+        return this.reg.toString().slice(0, -3);
+    }
+
+
 
 
 }
