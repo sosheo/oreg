@@ -1,0 +1,22 @@
+{
+  "name": "oreg",
+  "version": "0.0.0",
+  "description": "An ORM Query-Builder like interface for constructing Regular Expressions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sosheo/oreg.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sosheo/oreg/issues"
+  },
+  "homepage": "https://github.com/sosheo/oreg#readme",
+  "dependencies": {
+    "typescript": "^5.3.3"
+  }
+}
