@@ -27,6 +27,12 @@ class oreg extends RegExp {
     }
     
 
+    digit() {
+        this.oreg += '\\d';
+        return this;
+    }
+
+
 }
 
 export default oreg;
