@@ -26,6 +26,10 @@ class oreg extends RegExp {
         return this;
     }
     
+    string(string: string) {
+        this.oreg += string;
+        return this;
+    }
 
     digit() {
         this.oreg += '\\d';
