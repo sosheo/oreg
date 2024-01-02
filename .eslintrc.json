@@ -19,5 +19,6 @@
               "format": null
             }
         ]
-    }
+    },
+    "exclude": ["node_modules", "tests"]
 }
