@@ -49,28 +49,28 @@ class oreg extends RegExp {
         return this;
     }
     getRegex() {
-        return this.reg;
+        return this.oreg;
     }
 
     getRegexObject() {
         // recall constructor on this??
-        return new RegExp(this.reg);
+        return new RegExp(this.oreg);
     }
 
     getRegexString() {
-        return this.reg.toString();
+        return this.oreg.toString();
     }
 
     getRegexStringWithoutSlashes() {
-        return this.reg.toString().slice(1, -1);
+        return this.oreg.toString().slice(1, -1);
     }
 
     getRegexStringWithoutSlashesAndModifiers() {
-        return this.reg.toString().slice(1, -3);
+        return this.oreg.toString().slice(1, -3);
     }
 
     getRegexStringWithoutModifiers() {
-        return this.reg.toString().slice(0, -3);
+        return this.oreg.toString().slice(0, -3);
     }
 
 }
