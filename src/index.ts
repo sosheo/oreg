@@ -1,6 +1,6 @@
 
 
-class reg extends RegExp {
+class oreg extends RegExp {
     oreg: string;
 
     constructor(argA: any, argB: any) {
@@ -9,6 +9,8 @@ class reg extends RegExp {
 
         return this;
     }
+
+
 }
 
-export default reg;
+export default oreg;
