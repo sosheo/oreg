@@ -1,0 +1,23 @@
+{
+    "extends": [
+        "airbnb",
+        "airbnb-typescript"
+    ],
+    "parserOptions": {
+        "project": "./tsconfig.json"
+    },
+    "rules": {
+        "indent": ["error", 4],
+        "@typescript-eslint/indent": ["error", 4],
+        "import/extensions": "off",
+        "@typescript-eslint/quotes": ["error", "double"],
+        "@typescript-eslint/naming-convention": [
+            "error",
+            {
+              "selector": "variable",
+              "modifiers": ["destructured"],
+              "format": null
+            }
+        ]
+    }
+}
