@@ -24,6 +24,10 @@ class oreg extends RegExp {
         return this;
     }
 
+    endsWithAny(suffixes: string[]) {
+        this.oreg += '(' + suffixes.join('|') + ')$';
+        return this;
+    }
     
     chars(chars: string) {
         this.oreg += '[' + chars + ']';
