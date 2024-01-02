@@ -15,6 +15,10 @@ class oreg extends RegExp {
         return this;
     }
 
+    endsWith(suffix: string) {
+        this.oreg += suffix + '$';
+        return this;
+    }
     
 
 }
