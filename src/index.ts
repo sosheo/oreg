@@ -14,6 +14,10 @@ class oreg extends RegExp {
         this.oreg = '^' + prefix;
         return this;
     }
+    startsWithAny(prefixes: string[]) {
+        this.oreg = '^(' + prefixes.join('|') + ')';
+        return this;
+    }
 
     endsWith(suffix: string) {
         this.oreg += suffix + '$';
@@ -64,9 +68,6 @@ class oreg extends RegExp {
     getRegexStringWithoutModifiers() {
         return this.reg.toString().slice(0, -3);
     }
-
-
-
 
 }
 
