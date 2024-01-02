@@ -19,6 +19,12 @@ class oreg extends RegExp {
         this.oreg += suffix + '$';
         return this;
     }
+
+    
+    chars(chars: string) {
+        this.oreg += '[' + chars + ']';
+        return this;
+    }
     
 
 }
