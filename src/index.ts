@@ -1,59 +1,57 @@
-
-
 class oreg extends RegExp {
     oreg: string;
 
     constructor(argA: any, argB: any) {
         super(argA, argB);
         this.oreg = "";
-
-        return this;
     }
 
     startsWith(prefix: string) {
-        this.oreg = '^' + prefix;
+        this.oreg = `^${prefix}`;
         return this;
     }
+
     startsWithAny(prefixes: string[]) {
-        this.oreg = '^(' + prefixes.join('|') + ')';
+        this.oreg = `^(${prefixes.join("|")})`;
         return this;
     }
 
     endsWith(suffix: string) {
-        this.oreg += suffix + '$';
+        this.oreg += `${suffix}$`;
         return this;
     }
 
     endsWithAny(suffixes: string[]) {
-        this.oreg += '(' + suffixes.join('|') + ')$';
+        this.oreg += `(${suffixes.join("|")})$`;
         return this;
     }
 
     anyOf(callback: Function) {
         // TODO: placeholder fix this
-        this.oreg += '(' + callback(this) + ')';
+        this.oreg += `(${callback(this)})`;
         return this;
     }
-    
+
     chars(chars: string) {
-        this.oreg += '[' + chars + ']';
+        this.oreg += `[${chars}]`;
         return this;
     }
-    
+
     string(string: string) {
         this.oreg += string;
         return this;
     }
 
     digit() {
-        this.oreg += '\\d';
+        this.oreg += "\\d";
         return this;
     }
 
     caseInsensitive() {
-        this.oreg += '/i';
+        this.oreg += "/i";
         return this;
     }
+
     getRegex() {
         return this.oreg;
     }
@@ -78,7 +76,6 @@ class oreg extends RegExp {
     getRegexStringWithoutModifiers() {
         return this.oreg.toString().slice(0, -3);
     }
-
 }
 
 export default oreg;
