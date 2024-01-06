@@ -4,7 +4,8 @@ class Oreg {
     constructor() {}
 
     startsWith(prefix: string) {
-        this.oreg = `^${prefix}`;
+        const newOreg = this.#oregString + `^${prefix}`;
+        this.oreg = new RegExp(newOreg);
         return this;
     }
 
