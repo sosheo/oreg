@@ -19,7 +19,8 @@ class Oreg {
     }
 
     endsWith(suffix: string) {
-        this.oreg += `${suffix}$`;
+        const newOreg = this.#oregString + `${suffix}$`;
+        this.oreg = new RegExp(newOreg);
         return this;
     }
 
