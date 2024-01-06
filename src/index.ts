@@ -81,6 +81,17 @@ class Oreg {
     getRegexStringWithoutModifiers() {
         return this.oreg.toString().slice(0, -3);
     }
+
+}
+
+
+
+
+
+function oreg() { //arg1: string
+
+    return new Oreg(); // arg1
+
 }
 
 export default oreg;
