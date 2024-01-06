@@ -1,10 +1,7 @@
 class Oreg {
     oreg: RegExp | undefined = undefined;
 
-    constructor(argA: any, argB: any) {
-        super(argA, argB);
-        this.oreg = "";
-    }
+    constructor() {}
 
     startsWith(prefix: string) {
         this.oreg = `^${prefix}`;
