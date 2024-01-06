@@ -52,7 +52,8 @@ class Oreg {
     }
 
     caseInsensitive() {
-        this.oreg += "/i";
+        const newOreg = this.#oregString();
+        this.oreg = new RegExp(newOreg, "i");
         return this;
     }
 
