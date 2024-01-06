@@ -39,7 +39,9 @@ class Oreg {
     }
 
     chars(chars: string) {
-        this.oreg += `[${chars}]`;
+        console.log("chars", chars);
+        const newOreg = this.#oregString + `${chars}`;
+        this.oreg = new RegExp(newOreg);
         return this;
     }
 
