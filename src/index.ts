@@ -1,5 +1,5 @@
-class oreg extends RegExp {
-    oreg: string;
+class Oreg {
+    oreg: RegExp | undefined = undefined;
 
     constructor(argA: any, argB: any) {
         super(argA, argB);
