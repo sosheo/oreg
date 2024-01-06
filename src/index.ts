@@ -1,3 +1,5 @@
+type oregCallback = (oreg: Oreg) => Oreg;
+
 class Oreg {
     oreg: RegExp | undefined = undefined;
 
