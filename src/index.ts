@@ -67,7 +67,7 @@ class Oreg {
     }
 
     getRegexString() {
-        return this.oreg.toString();
+        return this.#oregString();
     }
 
     getRegexStringWithoutSlashes() {
