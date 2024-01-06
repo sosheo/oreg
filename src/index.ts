@@ -31,9 +31,10 @@ class Oreg {
         return this;
     }
 
-    anyOf(callback: Function) {
-        // TODO: placeholder fix this
-        this.oreg += `(${callback(this)})`;
+    anyOf(oregs: oregCallback[]) {
+        const results = oregs.map(oreg => oreg(new Oreg()).#oregString);
+        const newOreg = this.#oregString + `(${results.join("|")})`;
+        this.oreg = new RegExp(newOreg);
         return this;
     }
 
