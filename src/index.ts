@@ -5,12 +5,12 @@ class Oreg {
 
     constructor() {}
 
-    #oregString(): string {
+    get #oregString(): string {
         return this.oreg?.toString().slice(1, -1) || "";
     }
 
     startsWith(prefix: string = "") {
-        const newOreg = this.#oregString() + `^${prefix}`;
+        const newOreg = this.#oregString + `^${prefix}`;
         this.oreg = new RegExp(newOreg);
         return this;
     }
@@ -48,13 +48,13 @@ class Oreg {
     }
 
     digits() {
-        const newOreg = this.#oregString() + `\\d`;
+        const newOreg = this.#oregString + `\\d`;
         this.oreg = new RegExp(newOreg);
         return this;
     }
 
     caseInsensitive() {
-        const newOreg = this.#oregString();
+        const newOreg = this.#oregString;
         this.oreg = new RegExp(newOreg, "i");
         return this;
     }
@@ -69,7 +69,7 @@ class Oreg {
     }
 
     getRegexString() {
-        return this.#oregString();
+        return this.#oregString;
     }
 
     getRegexStringWithoutSlashes() {
