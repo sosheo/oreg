@@ -45,8 +45,9 @@ class Oreg {
         return this;
     }
 
-    digit() {
-        this.oreg += "\\d";
+    digits() {
+        const newOreg = this.#oregString() + `\\d`;
+        this.oreg = new RegExp(newOreg);
         return this;
     }
 
