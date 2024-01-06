@@ -3,6 +3,10 @@ class Oreg {
 
     constructor() {}
 
+    #oregString(): string {
+        return this.oreg?.toString().slice(1, -1) || "";
+    }
+
     startsWith(prefix: string) {
         const newOreg = this.#oregString + `^${prefix}`;
         this.oreg = new RegExp(newOreg);
