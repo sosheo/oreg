@@ -20,7 +20,7 @@ class Oreg {
         return this;
     }
 
-    endsWith(suffix: string) {
+    endsWith(suffix: string = "") {
         const newOreg = this.#oregString + `${suffix}$`;
         this.oreg = new RegExp(newOreg);
         return this;
