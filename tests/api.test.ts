@@ -6,8 +6,8 @@ test("test test", (t: any) => {
 });
 
 test("create greater london postcode regex", (t: any) => {
-    const greaterLondonServiceAreaRegex = oreg() // ^
-        .startsWith()
+    const greaterLondonServiceAreaRegex = oreg() 
+        .startsWith() // ^
         .anyOf([ // (
                 (o) => o.chars('w').digits(), // w\d
                 (o) => o.chars('sw').digits(), // sw\d
@@ -39,6 +39,8 @@ test("create greater london postcode regex", (t: any) => {
     const croydon = "cr0";
     const southend = "ss11";
 
+    // @ts-ignore
     t.is(greaterLondonServiceAreaRegex.oreg.test(croydon), true);
+    // @ts-ignore
     t.is(greaterLondonServiceAreaRegex.oreg.test(southend), false);
 });
