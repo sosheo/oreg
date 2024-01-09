@@ -2,8 +2,9 @@
   "name": "oreg",
   "version": "0.0.2",
   "description": "An ORM Query-Builder like interface for constructing Regular Expressions",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "build": "tsc --build --force",
     "test": "ava",
     "test:cov": "c8 ava",
     "lint": "eslint . --ext .ts"
