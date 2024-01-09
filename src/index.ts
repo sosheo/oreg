@@ -15,10 +15,10 @@ class Oreg {
         return this;
     }
 
-    startsWithAny(prefixes: string[]) {
-        this.oreg = `^(${prefixes.join("|")})`;
-        return this;
-    }
+    // startsWithAny(prefixes: string[]) {
+    //     this.oreg = `^(${prefixes.join("|")})`;
+    //     return this;
+    // }
 
     endsWith(suffix: string = "") {
         const newOreg = this.#oregString + `${suffix}$`;
@@ -26,10 +26,10 @@ class Oreg {
         return this;
     }
 
-    endsWithAny(suffixes: string[]) {
-        this.oreg += `(${suffixes.join("|")})$`;
-        return this;
-    }
+    // endsWithAny(suffixes: string[]) {
+    //     this.oreg += `(${suffixes.join("|")})$`;
+    //     return this;
+    // }
 
     anyOf(oregs: oregCallback[]) {
         const results = oregs.map(oreg => oreg(new Oreg()).#oregString);
@@ -44,10 +44,10 @@ class Oreg {
         return this;
     }
 
-    string(string: string) {
-        this.oreg += string;
-        return this;
-    }
+    // string(string: string) {
+    //     this.oreg += string;
+    //     return this;
+    // }
 
     digits() {
         const newOreg = this.#oregString + `\\d`;
@@ -61,22 +61,22 @@ class Oreg {
         return this;
     }
 
-    getRegex() {
-        return this.oreg;
-    }
+    // getRegex() {
+    //     return this.oreg;
+    // }
 
-    getRegexObject() {
-        // recall constructor on this??
-        return new RegExp(this.oreg);
-    }
+    // getRegexObject() {
+    //     // recall constructor on this??
+    //     return new RegExp(this.oreg);
+    // }
 
     getRegexString() {
         return this.#oregString;
     }
 
-    getRegexStringWithoutSlashes() {
-        return this.oreg.toString().slice(1, -1);
-    }
+    // getRegexStringWithoutSlashes() {
+    //     return this.oreg.toString().slice(1, -1);
+    // }
 
     getRegexStringWithoutSlashesAndModifiers() {
         return this.oreg.toString().slice(1, -3);
