@@ -79,11 +79,11 @@ class Oreg {
     // }
 
     getRegexStringWithoutSlashesAndModifiers() {
-        return this.oreg.toString().slice(1, -3);
+        return this.#oregString.slice(1, -3);
     }
 
     getRegexStringWithoutModifiers() {
-        return this.oreg.toString().slice(0, -3);
+        return this.#oregString.toString().slice(0, -3);
     }
 
 }
