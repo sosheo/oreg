@@ -1,6 +1,6 @@
 {
   "name": "oreg",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An ORM Query-Builder like interface for constructing Regular Expressions",
   "main": "index.js",
   "scripts": {
