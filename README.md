@@ -1,10 +1,10 @@
-# Oreg - JavaScript Regular Expression Builder
+# oreg - JavaScript Regular Expression Builder
 
     oreg is currently in development and is not ready for production use.
     
     Please feel free to take a look but don't bank on anything working.
 
-Oreg is a JavaScript library designed to provide an Object-Relational Mapping (ORM) Query Builder-like interface for constructing regular expressions. This intuitive and fluent API simplifies the process of creating complex regular expressions, making your code more readable and maintainable.
+oreg is a JavaScript library designed to provide an Object-Relational Mapping (ORM) Query Builder-like interface for constructing regular expressions. This intuitive and fluent API simplifies the process of creating complex regular expressions, making your code more readable and maintainable.
 
 ## Features
 
