@@ -88,14 +88,8 @@ class Oreg {
 
 }
 
-
-
-
-
-function oreg() { //arg1: string
-
-    return new Oreg(); // arg1
-
+export function oreg() {
+    return new Oreg();
 }
 
 export default oreg;

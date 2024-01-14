@@ -28,7 +28,7 @@ yarn add oreg
 First, import Oreg into your JavaScript file:
 
 ```javascript
-import oreg from 'oreg';
+import { oreg } from 'oreg';
 ```
 
 ### Basic Example
