@@ -50,6 +50,12 @@ class Oreg {
         return this;
     }
 
+    word() {
+        const newOreg = this.#oregString + `\\w`;
+        this.oreg = new RegExp(newOreg);
+        return this;
+    }
+
     // endsWithAny(suffixes: string[]) {
     //     this.oreg += `(${suffixes.join("|")})$`;
     //     return this;
