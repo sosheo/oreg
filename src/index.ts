@@ -62,6 +62,12 @@ class Oreg {
         return this;
     }
 
+    repeat(min: number, max: number) {
+        const newOreg = this.#oregString + `{${min},${max}}`;
+        this.oreg = new RegExp(newOreg);
+        return this;
+    }
+
     // endsWithAny(suffixes: string[]) {
     //     this.oreg += `(${suffixes.join("|")})$`;
     //     return this;
