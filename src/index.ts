@@ -140,6 +140,12 @@ class Oreg {
         return this;
     }
 
+    or() {
+        const newOreg = this.#oregString + `|`;
+        this.oreg = new RegExp(newOreg);
+        return this;
+    }
+
     // string(string: string) {
     //     this.oreg += string;
     //     return this;
