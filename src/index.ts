@@ -128,6 +128,12 @@ class Oreg {
         return this;
     }
 
+    group(oreg: oregCallback) {
+        const newOreg = this.#oregString + `(${oreg(new Oreg()).#oregString})`;
+        this.oreg = new RegExp(newOreg);
+        return this;
+    }
+
     // string(string: string) {
     //     this.oreg += string;
     //     return this;
