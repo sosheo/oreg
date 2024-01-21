@@ -32,6 +32,12 @@ class Oreg {
         return this;
     }
 
+    endOfLine() {
+        const newOreg = this.#oregString + `$`;
+        this.oreg = new RegExp(newOreg);
+        return this;
+    }
+
     // endsWithAny(suffixes: string[]) {
     //     this.oreg += `(${suffixes.join("|")})$`;
     //     return this;
