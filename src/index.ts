@@ -110,6 +110,12 @@ class Oreg {
         return this;
     }
 
+    optional() {
+        const newOreg = this.#oregString + `?`;
+        this.oreg = new RegExp(newOreg);
+        return this;
+    }
+
     // string(string: string) {
     //     this.oreg += string;
     //     return this;
