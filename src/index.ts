@@ -170,14 +170,9 @@ class Oreg {
         return this;
     }
 
-    // getRegex() {
-    //     return this.oreg;
-    // }
-
-    // getRegexObject() {
-    //     // recall constructor on this??
-    //     return new RegExp(this.oreg);
-    // }
+    getRegex() {
+        return this.oreg;
+    }
 
     getRegexString() {
         return this.#oregString;
