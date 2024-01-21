@@ -44,6 +44,12 @@ class Oreg {
         return this;
     }
 
+    nonWhitespace() {
+        const newOreg = this.#oregString + `\\S`;
+        this.oreg = new RegExp(newOreg);
+        return this;
+    }
+
     // endsWithAny(suffixes: string[]) {
     //     this.oreg += `(${suffixes.join("|")})$`;
     //     return this;
