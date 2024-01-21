@@ -92,6 +92,12 @@ class Oreg {
         return this;
     }
 
+    exactly(string: string) {
+        const newOreg = this.#oregString + `^${string}$`;
+        this.oreg = new RegExp(newOreg);
+        return this;
+    }
+
     // string(string: string) {
     //     this.oreg += string;
     //     return this;
