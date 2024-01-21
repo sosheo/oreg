@@ -15,6 +15,12 @@ class Oreg {
         return this;
     }
 
+    startOfLine() {
+        const newOreg = this.#oregString + `^`;
+        this.oreg = new RegExp(newOreg);
+        return this;
+    }
+
     // startsWithAny(prefixes: string[]) {
     //     this.oreg = `^(${prefixes.join("|")})`;
     //     return this;
