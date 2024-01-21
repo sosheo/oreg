@@ -146,6 +146,13 @@ class Oreg {
         return this;
     }
 
+    wordBoundary() {
+        const newOreg = this.#oregString + `\\b`;
+        this.oreg = new RegExp(newOreg);
+        return this;
+    }
+
+
     // string(string: string) {
     //     this.oreg += string;
     //     return this;
