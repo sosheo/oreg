@@ -38,6 +38,12 @@ class Oreg {
         return this;
     }
 
+    whitespace() {
+        const newOreg = this.#oregString + `\\s`;
+        this.oreg = new RegExp(newOreg);
+        return this;
+    }
+
     // endsWithAny(suffixes: string[]) {
     //     this.oreg += `(${suffixes.join("|")})$`;
     //     return this;
