@@ -122,6 +122,12 @@ class Oreg {
         return this;
     }
 
+    not(chars: string) {
+        const newOreg = this.#oregString + `[^${chars}]`;
+        this.oreg = new RegExp(newOreg);
+        return this;
+    }
+
     // string(string: string) {
     //     this.oreg += string;
     //     return this;
