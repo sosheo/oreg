@@ -116,6 +116,12 @@ class Oreg {
         return this;
     }
 
+    range(from: string, to: string) {
+        const newOreg = this.#oregString + `[${from}-${to}]`;
+        this.oreg = new RegExp(newOreg);
+        return this;
+    }
+
     // string(string: string) {
     //     this.oreg += string;
     //     return this;
